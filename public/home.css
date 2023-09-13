@@ -1,0 +1,43 @@
+*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    font-size: 18px;
+}
+body {
+    margin: 0 auto;
+    padding: 0;
+    color: white;
+}
+.center {
+    text-align: center;
+}
+#content {
+    padding: 40px;
+}
+.topnav {
+    background-color: black;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+.topnav a {
+    display: inline-block;
+    padding: 25px 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+.topnav a:hover {
+    background-color: #333;
+}
+#fullscreen-img {
+    background-image: url('https://i.imgur.com/WlLbm4w.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
