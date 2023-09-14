@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="{{ asset('home.css') }}">
 </head>
 <body>
-    <div class="topnav">
+    <h1>Vinícius Portes</h1>
+    <div class="navbar">
         <a href="/">Home</a>
         <a href="/post">Post</a>
         <a href="/contact">Contact</a>

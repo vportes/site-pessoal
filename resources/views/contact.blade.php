@@ -9,18 +9,25 @@
     <link rel="stylesheet" href="{{ asset('home.css') }}">
 </head>
 <body>
-    <div class="topnav">
+    <h1>Vinícius Portes</h1>
+    <div class="navbar">
         <a href="/">Home</a>
         <a href="/post">Post</a>
         <a href="/contact">Contact</a>
         <a href="/about">About</a>
     </div>
-    <div class="content">
-        <h1>Contato</h1>
-        <ul>
-            <li><h4>vinicius.portes@edu.unifil.br</h4></li>
-            <li><h4>viniciusportescn@gmail.com</h4></li>
-        </ul>
+    <div class="container">
+        <div class="content-box">
+            <h1>Contato</h1>
+            <hr>
+            <br>
+            <h2>E-mail</h2>
+            <p>viniciusportescn@gmail.com</p>
+            <p>vinicius.portes@edu.unifil.br</p>
+            <br>
+            <h2>Telefone</h2>
+            <p>(43) 98864-7356</p>
+        </div>
     </div>
 </body>
 </html>

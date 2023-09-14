@@ -2,17 +2,44 @@
     font-size: 18px;
 }
 body {
-    margin: 0 auto;
-    padding: 0;
     color: white;
-    background-color: black;
+    margin: 3% 20% 3% 20%;
+    padding: 0;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s, text-decoration 0.3s, background 0.3s;
 }
 .labels {
     padding-right: 200px;
     padding-left: 200px;
 }
+.wrapper {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 .center {
     text-align: center;
+}
+.content-box {
+    background-color: whitesmoke;
+    color: black;
+    flex: 1;
+    width: 30%;
+    margin: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    text-align: center;
+}
+.container {
+    margin-left:20%;
+    margin-right:20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 80px);
 }
 .img-container {
     text-align: center;
@@ -23,35 +50,40 @@ body {
     height: 100%;
     display: inline-block;
 }
-.content {
-    padding: 80px;
+.navbar {
+    display: flex;
+    align-items: center;
 }
-.topnav {
-    background-color: black;
-    overflow: hidden;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-}
-.topnav a {
+.navbar a {
+    color: lightgray;
     display: inline-block;
-    padding: 25px 50px;
-    text-decoration: none;
+    padding-right: 30px;
+    text-decoration: underline transparent;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+    font-size: 16px;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+.navbar a:hover {
     color: white;
-    font-size: 20px;
-    margin: 0 10px;
-    transition: background-color 0.3s;
+    text-decoration: underline lightseagreen;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
 }
-.topnav a:hover {
-    background-color: #333;
+.theme-button {
+    max-height: 40px;
+    max-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: auto;
+    border: 2px black;
 }
-#fullscreen-img {
-    background-image: url('home.jpg');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+.theme-button img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
 }
