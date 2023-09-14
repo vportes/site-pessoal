@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Página Inicial</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="{{ asset('home.css') }}">
 </head>
 <body>
@@ -15,8 +15,12 @@
         <a href="/contact">Contact</a>
         <a href="/about">About</a>
     </div>
-    <h1 class="center">Página Inicial</h1>
-    <div id="fullscreen-img">
+    <div class="content">
+        <h1>Contato</h1>
+        <ul>
+            <li><h4>vinicius.portes@edu.unifil.br</h4></li>
+            <li><h4>viniciusportescn@gmail.com</h4></li>
+        </ul>
     </div>
 </body>
 </html>
