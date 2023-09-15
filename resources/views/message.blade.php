@@ -12,13 +12,25 @@
         <script src="theme-toggle.js"></script>
     </head>
     <body>
-        <div id="header"></div>
+        <button class="theme-button" id="theme-toggle-button">
+            <img src="moon.png" alt="sun">
+        </button>
+        <h1>Vinícius Portes</h1>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/guestbook">Guestbook</a>
+            <a href="/contact">Contact</a>
+            <a href="/about">About</a>
+            <a href="https://github.com/vportes" target="_blank">
+                <i class="fab fa-github"></i> Github
+            </a>
+        </div>
         <br>
         <h1>Deixe uma mensagem!</h1>
-        <form method="POST" action="/post">
+        <form method="POST" action="{{ route('post.message') }}" id="guestbook-form">
             @csrf
-            <label><h4>Nome:</h4><textarea id="msg-text" name="name" rows="1" cols="50"></textarea></label>
-            <label><h4>Mensagem:</h4><textarea id="msg-text" name="message" rows="10" cols="50"></textarea></label>
+            <label><h4>Nome:</h4><textarea id="msg-text" name="name" rows="1" cols="50" required></textarea></label>
+            <label><h4>Mensagem:</h4><textarea id="msg-text" name="message" rows="10" cols="50" required></textarea></label>
             <br>
             <div style="padding-top: 20px">
                 <button id="msg-submit" type="submit">Enviar</button>

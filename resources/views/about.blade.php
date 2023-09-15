@@ -12,7 +12,19 @@
     <script src="theme-toggle.js"></script>
 </head>
 <body>
-    <div id="header"></div>
+    <button class="theme-button" id="theme-toggle-button">
+        <img src="moon.png" alt="sun">
+    </button>
+    <h1>Vinícius Portes</h1>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/guestbook">Guestbook</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/vportes" target="_blank">
+            <i class="fab fa-github"></i> Github
+        </a>
+    </div>
     <h1 class="center">Sobre</h1>
     <h4 class="center">Não sei o que colocar</h4>
 </body>

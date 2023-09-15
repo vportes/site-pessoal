@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GuestbookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,15 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('home');
-});
-Route::get('/guestbook', function () {
-    return view('guestbook');
-});
+})->name('home');
+
+Route::get('/guestbook', [GuestbookController::class, 'showGuestbook'])->name('guestbook');
+
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
+
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
+
+Route::get('/message', function () {
+    return view('message');
+})->name('message.form');
+
+Route::post('/post', [GuestbookController::class, 'postMessage'])->name('post.message');
