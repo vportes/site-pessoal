@@ -7,8 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Guestbook</title>
         <link rel="stylesheet" href="{{ asset('home.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
-        <script src="header.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+              crossorigin="anonymous">
         <script src="theme-toggle.js"></script>
     </head>
     <body>
@@ -30,7 +30,8 @@
         <form method="POST" action="{{ route('post.message') }}" id="guestbook-form">
             @csrf
             <label><h4>Nome:</h4><textarea id="msg-text" name="name" rows="1" cols="50" required></textarea></label>
-            <label><h4>Mensagem:</h4><textarea id="msg-text" name="message" rows="10" cols="50" required></textarea></label>
+            <label><h4>Mensagem:</h4><textarea id="msg-text" name="message" rows="10" cols="50"
+                                               required></textarea></label>
             <br>
             <div style="padding-top: 20px">
                 <button id="msg-submit" type="submit">Enviar</button>
