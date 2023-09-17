@@ -13,7 +13,7 @@
     </head>
     <body>
         <button class="theme-button" id="theme-toggle-button">
-            <img src="moon.png" alt="sun">
+            <img src="moon.png" alt="moon">
         </button>
         <h1>Vinícius Portes</h1>
         <div class="navbar">
