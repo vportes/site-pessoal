@@ -5,44 +5,59 @@ document.addEventListener('DOMContentLoaded', function () {
     const contentBox = document.getElementById('content-box');
 
     function setTheme(isDarkMode) {
-        const image = themeButton.querySelector('img');
-
+        if (themeButton) {
+            const image = themeButton.querySelector('img');
+            if (isDarkMode) {
+                if (image) { image.src = 'moon.png'; }
+            } else {
+                if (image) { image.src = 'sun.png'; }
+            }
+        }
         if (isDarkMode) {
             setDarkTheme();
         } else {
             setLightTheme();
         }
+        localStorage.setItem('isDarkMode', isDarkMode);
     }
 
     function setDarkTheme() {
-        const image = themeButton.querySelector('img');
-        image.src = 'moon.png';
         body.style.background = 'linear-gradient(to right, #0f0c29, #302b63, #24243e)';
         body.style.color = 'white';
-
+        if (themeButton) {
+            const image = themeButton.querySelector('img');
+            if (image) {
+                image.src = 'moon.png';
+            }
+        }
         if (contentBox) {
             contentBox.style.backgroundColor = '';
             contentBox.style.border = '';
         }
-
-        for (const link of navbarLinks) {
-            link.style.color = '';
+        if (navbarLinks) {
+            for (const link of navbarLinks) {
+                link.style.color = '';
+            }
         }
     }
 
     function setLightTheme() {
-        const image = themeButton.querySelector('img');
-        image.src = 'sun.png';
         body.style.background = 'linear-gradient(to right, #ece9e6, #efefef)';
         body.style.color = 'black';
-
+        if (themeButton) {
+            const image = themeButton.querySelector('img');
+            if (image) {
+                image.src = 'sun.png';
+            }
+        }
         if (contentBox) {
             contentBox.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
             contentBox.style.border = '1px solid black';
         }
-
-        for (const link of navbarLinks) {
-            link.style.color = 'black';
+        if (navbarLinks) {
+            for (const link of navbarLinks) {
+                link.style.color = 'black';
+            }
         }
     }
 
@@ -64,11 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const storedTheme = localStorage.getItem('isDarkMode');
-    if (storedTheme !== null) { // Checa se o botão de tema foi clicado
+    if (storedTheme !== null) { // checa se existe algum tema no localStorage
         setTheme(storedTheme === 'true');
     } else {
-        detectSystemTheme(); // Se não, usa o tema padrão do sistema
+        detectSystemTheme(); // detecta o tema do sistema se localStorage vazio
     }
-
-    body.classList.add('theme-loaded'); // Previne body de fazer transição
 });
