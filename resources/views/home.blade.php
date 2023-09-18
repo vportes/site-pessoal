@@ -28,13 +28,18 @@
         <div class="wrapper">
             <h2>Bem vindo ao meu website!</h2>
         </div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at distinctio dolorum earum eius, esse
-        explicabo facilis fugit minima molestias nisi perferendis quod repellat rerum sequi temporibus, unde, vitae
-        voluptates!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum delectus eos et iste nisi optio praesentium quis
-        sed suscipit. Accusamus cum eligendi enim eos ex rem rerum soluta tempora tenetur!
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dicta error explicabo facere in, laborum
-        obcaecati recusandae repudiandae sed voluptate. Beatae corporis distinctio dolorum, et fuga sunt vero vitae
-        voluptate!
+        Este é um website simples que utiliza PHP e Laravel como framework de back-end. Neste projeto, destacamos o uso de elementos no desenvolvimento web, como, por exemplo:
+        <ul>
+            <li><h4>CSS para estilização de páginas:</h4>É utilizado CSS para garantir que o website seja visualmente agradável. Também são utilizados transições
+            ao colocar o mouse em cima dos botões e também durante a mudança de tema.</li>
+            <li><h4>JavaScript para interação com o website e mudança de tema:</h4> É utilizado JavaScript para tornar o website interativo, como,
+            por exemplo, no botão de mudança de tema. Ao entrar no website a configuração padrão de tema do usuário é utilizado para escolher o tema
+            inicial, podendo o botão de mudança de tema ser clicado para mudar o tema, utilizando armazenamento local (localStorage) para que o
+                tema continue sendo usado em outras páginas.</li>
+            <li><h4>Método POST para envio de informações:</h4> Foi implementado um Guestbook para que os usuários possam ver mensagens deixadas
+            por outros usuários ou deixar suas próprias mensagens. É atualmente utilizado o localStorage para guardar as mensagens, mas há possibilidade do
+            uso de bancos de dados para guardar as informações.</li>
+        </ul>
+        No geral, este website serve como um exemplo prático do uso de elementos no desenvolvimento web.
     </body>
 </html>

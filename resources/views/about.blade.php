@@ -25,7 +25,9 @@
                 <i class="fab fa-github"></i> Github
             </a>
         </div>
-        <h1 class="center">Sobre</h1>
-        <h4 class="center">Não sei o que colocar</h4>
+        <div class="wrapper">
+            <h2>Sobre mim</h2>
+        </div>
+        <h4>Estudante de Engenharia de Software na UniFil, tenho conhecimentos em Java, C++, desenvolvimento web e SQL.</h4>
     </body>
 </html>
