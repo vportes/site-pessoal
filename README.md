@@ -8,15 +8,16 @@ Exemplo simples de website utilizando o framework Laravel. O site é um exemplo 
 
 ## Instalação
 
-Necessário Php e Composer para abrir o site
-
+Necessário ter instalado Php, Composer e alguma database (mysql, mariadb, etc)
 ```bash
 git clone https://github.com/vportes/site-pessoal.git
 cd site-pessoal
 composer install
 cp .env.example .env
 ```
-Modifique o arquivo ".env", em especial as linhas "APP_URL" e "APP_KEY".
+Crie uma [database](https://dev.mysql.com/doc/refman/8.0/en/database-use.html) caso não tenha ainda.
+
+Modifique o arquivo ".env". Preencha as linhas "APP_URL", "DB_DATABASE", "DB_USERNAME" e "DB_PASSWORD" corretamente.
 
 ```bash
 php artisan serve
