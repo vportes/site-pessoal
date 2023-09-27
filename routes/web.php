@@ -33,4 +33,4 @@ Route::get('/message', function () {
     return view('message');
 })->name('message.form');
 
-Route::post('/post', [GuestbookController::class, 'postMessage'])->name('post.message');
+Route::post('/message', [GuestbookController::class, 'postMessage'])->name('post.message');

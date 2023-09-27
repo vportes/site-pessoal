@@ -29,11 +29,20 @@
         <h1>Mensagens de visitantes</h1>
         <h4>Veja mensagens deixadas por outros usuários ou deixe a sua própria mensagem!</h4>
 
-        @if ($messages !== null && count($messages) > 0)
+        @if ($messages->count() > 0)
+            @php
+                $currentDate = null;
+            @endphp
             <ul>
                 @foreach ($messages as $message)
+                    @if ($message->message_date != $currentDate)
+                        <h3>{{ $message->message_date }}</h3>
+                        @php
+                            $currentDate = $message->message_date;
+                        @endphp
+                    @endif
                     <li>
-                        <strong>{{ $message['name'] }}:</strong> {{ $message['message'] }}
+                        [{{ $message->message_time }}] - <strong>{{ $message->name }}:</strong> {{ $message->message }}
                     </li>
                 @endforeach
             </ul>
